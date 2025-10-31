@@ -74,8 +74,16 @@ article {
 
 .hard_skills {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .hard_skills i {
   display: flex;
+}
+
+.board_soft_skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  margin: 0 10%;
 }
