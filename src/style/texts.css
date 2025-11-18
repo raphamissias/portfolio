@@ -1,19 +1,45 @@
-a {
-  color: var(--color-grey-700);
+* {
+  color: var(--color-grey-300);
+  text-decoration: none;
 }
 
 h1 {
+  display: block;
+  font-family: 'Raleway';
+  font-size: 2em;
+  font-weight: bold;
   color: var(--color-grey-700);
 }
 
-h4 {
+h2 {
+  display: block;
+  font-family: 'Raleway';
+  font-size: 1.5em;
+  font-weight: bold;
   color: var(--color-grey-700);
 }
 
 h3 {
+  display: block;
+  font-family: 'Raleway';
+  font-size: 1.17em;
+  font-weight: bold;
+  color: var(--color-grey-700);
+}
+
+
+h4 {
+  display: block;
+  font-family: 'Raleway';
+  font-size: 1em;
+  font-weight: bold;
   color: var(--color-grey-700);
 }
 
 p {
+  color: var(--color-grey-700);
+}
+
+img {
   color: var(--color-grey-700);
 }

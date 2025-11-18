@@ -1,0 +1,315 @@
+.marquee-content {
+  flex-shrink: 0;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1.2rem));
+  }
+}
+
+.projects-content {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  } to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.project_info {
+  animation: appear-p linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear-p {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  } to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.projects-img {
+  transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+
+  &:hover {
+    transform: scale(1);
+  }
+
+  &::before,
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+  }
+
+  &::before {
+    transform: translateZ(4rem);
+    border: 5px solid #9819d3;
+    &:hover {
+      transform: translateZ(0);
+    }
+  }
+
+  &::after {
+    transform: translateZ(-4rem);
+    background: #9819d3;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+    &:hover {
+      transform: translateZ(-1px);
+    }
+  }
+}
+
+.projects-content:hover .projects-img {
+  transform: scale(1);
+}
+
+@media (max-width: 500px) {
+  @keyframes img-enter {
+    from {
+      transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+    }
+    to {
+      transform: scale(1) rotateY(0deg) rotateX(0deg) translateZ(0rem);
+    }
+  }
+  
+  .projects-img {
+    position: relative;
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+    transition: 0.6s ease transform;
+  
+    /* 2 — Animação por scroll */
+    animation: img-enter linear;
+    animation-timeline: view();
+    animation-fill-mode: both;
+    
+    /* dispara quando a imagem cruza o centro da tela */
+    animation-range: entry 70% cover 60%;
+  }
+  
+  /* Efeito opcional no hover */
+  .projects-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ============================
+     FRONTS e BACKS 3D DA IMAGEM
+  ============================ */
+  .projects-img::before,
+  .projects-img::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+  }
+  
+  .projects-img::before {
+    transform: translateZ(4rem);
+    border: 5px solid #9819d3;
+  }
+  
+  .projects-img::after {
+    transform: translateZ(-4rem);
+    background: #9819d3;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Somente hover visual, não interfere no scroll animation */
+  .projects-img:hover::before {
+    transform: translateZ(0);
+  }
+  
+  .projects-img:hover::after {
+    transform: translateZ(-1px);
+  }
+}
+
+/* @media (max-width: 500px) {
+  .projects-img {
+    transform: none;
+    animation: none;
+  }
+
+  .projects-img::before,
+  .projects-img::after {
+    display: none;
+  }
+} */
+
+
+/* --------- Skill Carousel ------------ */
+
+/* Container */
+.carousel {
+  width: 100%;
+  max-width: 1000px;
+  height: 420px; /* ajuste se quiser menor/maior */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;           /* importantíssimo: evita overflow */
+  perspective: 1200px;        /* profundidade 3D */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Inner apenas para posicionamento absoluto dos cards */
+.carousel .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Base dos cards (centro de referência: left:50% / top:50%) */
+.carousel .card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 50%;                /* ocupa boa parte da área do centro */
+  max-width: 520px;
+  min-width: 260px;          /* melhora legibilidade em telas pequenas */
+  height: auto;
+  padding: 1.6rem;
+  box-sizing: border-box;
+  background: var(--color-grey-100); /* card com fundo para legibilidade */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(10,10,20,0.12);
+  text-align: center;
+  transition: transform 700ms cubic-bezier(.2,.9,.2,1), 
+              opacity 700ms ease, 
+              filter 700ms ease;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none; /* somente o central terá pointer-events quando ativo */
+}
+
+/* Conteúdo legível */
+.carousel .card img {
+  width: 8.5rem;
+  height: 8.5rem;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+}
+.carousel .card h3 {
+  font-size: 1.4rem;
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1.15;
+}
+.carousel .card p {
+  font-size: 1rem;
+  max-width: 36rem;
+  margin: 0 auto;
+  color: var(--color-grey-400);
+  line-height: 1.4;
+}
+
+/* Posições visuais — usamos a mesma animação com delays para virar o foco */
+@keyframes cardCycle {
+  /* a cada 25% avançamos para a próxima posição */
+  0% {
+    transform: translate(50%, -50%) rotateY(-18deg) scale(0.82);
+    opacity: 0.36;
+    filter: blur(2px) brightness(.78);
+    z-index: 1;
+    pointer-events: none;
+  }
+  20% {
+    transform: translate(50%, -50%) rotateY(-18deg) scale(0.82);
+    opacity: 0.36;
+    filter: blur(2px) brightness(.78);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  25% {
+    transform: translate(-50%, -50%) rotateY(0deg) scale(1);
+    opacity: 1;
+    filter: none;
+    z-index: 3;
+    pointer-events: auto;
+  }
+  45% {
+    transform: translate(-50%, -50%) rotateY(0deg) scale(1);
+    opacity: 1;
+    filter: none;
+    z-index: 3;
+    pointer-events: auto;
+  }
+
+  50% {
+    transform: translate(-150%, -50%) rotateY(18deg) scale(0.82);
+    opacity: 0.36;
+    filter: blur(2px) brightness(.78);
+    z-index: 1;
+    pointer-events: none;
+  }
+  70% {
+    transform: translate(-150%, -50%) rotateY(18deg) scale(0.82);
+    opacity: 0.36;
+    filter: blur(2px) brightness(.78);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  75% {
+    transform: translate(-200%, -50%) rotateY(30deg) scale(0.6);
+    opacity: 0;
+    filter: blur(4px) brightness(.6);
+    z-index: 0;
+    pointer-events: none;
+  }
+  100% {
+    transform: translate(-200%, -50%) rotateY(30deg) scale(0.6);
+    opacity: 0;
+    filter: blur(4px) brightness(.6);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+/* Aplicando animação a cada card com delays para sincronizar o "foco" */
+.carousel .card:nth-child(1) { animation: cardCycle 10s infinite ease-in-out; animation-delay: 0s; }
+.carousel .card:nth-child(2) { animation: cardCycle 10s infinite ease-in-out; animation-delay: -2.5s; }
+.carousel .card:nth-child(3) { animation: cardCycle 10s infinite ease-in-out; animation-delay: 5s; }
+.carousel .card:nth-child(4) { animation: cardCycle 10s infinite ease-in-out; animation-delay: 2.5s; }
+/* Ao passar o mouse pausamos tudo (inner também) */
+/* .carousel:hover .card,
+.carousel:hover .inner {
+  animation-play-state: paused;
+  cursor: pointer;
+} */
+
+/* --------- End Skill Carousel ------------ */
