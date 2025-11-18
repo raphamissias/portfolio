@@ -1,89 +1,104 @@
-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  background-color: black;
+.navbar {
+  width: calc(100% - 32px);
+  background-color: none;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
 }
 
-nav {
-  max-width: 1000px;
+.navbar.scrolled {
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(27, 27, 27, 0.6);
+  transition: all 0.4s ease;
+}
+
+.nav-content {
+  transition: padding 0.3s ease;
   width: 100%;
+  max-width: 1610px;
+}
 
-  margin-left: auto;
-  margin-right: auto;
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in 0.8s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
 
-  display: flex;
-  justify-content: space-between;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  padding: 1.5rem;
-
-  border-radius: 0 0 10px 10px;
-
+dialog {
   background-color: var(--color-grey-100);
 }
 
-main {
-  max-width: 1000px;
-  width: 100%;
-
-  margin-left: auto;
-  margin-right: auto;
+/* Disable main scroll while modal is open */
+body:has(dialog[open]) {
+  overflow: hidden;
+  overscroll-behavior: contain;
 }
 
-article {
+dialog[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+html.modal-open, body.modal-open {
+  overflow-x: hidden;
+}
+
+.modal_list::-webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  scrollbar-color: var(--color-grey-100) var(--color-brand-3);
+}
+
+.modal_item {
+  position: relative;
+}
+
+.modal_img {
+  display: block;
+  margin: auto;
+}
+
+.modal_info {
+  position: absolute;
   display: flex;
   flex-direction: column;
-
-  gap: 1rem;
-}
-
-.home {
-  display: flex;
-  flex-direction: column;
-
-  gap: 1rem;
-}
-
-.home-intro {
-  display: flex;
-}
-
-.intro-brief {
-  max-width: 500px;
-}
-
-.intro-picture {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.picture-profile {
-  max-width: 300px;
-
-  border-radius: 50%;
-}
-
-.project {
-  display: flex;
   align-items: center;
+  text-align: center;
+
+  padding: 2rem;
+  opacity: 1;
+  transition: 0.6s;
+
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.hard_skills {
-  display: flex;
-  flex-wrap: wrap;
+.modal_info:hover {
+  opacity: 0;
 }
 
-.hard_skills i {
-  display: flex;
-}
-
-.board_soft_skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  
-  margin: 0 10%;
-}
+/* .navbar.scrolled .nav-content {
+  padding: 1rem 0;
+} */
