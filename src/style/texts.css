@@ -27,7 +27,6 @@ h3 {
   color: var(--color-grey-700);
 }
 
-
 h4 {
   display: block;
   font-family: 'Raleway';
@@ -36,8 +35,14 @@ h4 {
   color: var(--color-grey-700);
 }
 
+a {
+  font-family: 'IBM Plex Mono', sans-serif;
+  color: var(--color-grey-300);
+  text-decoration: none;
+}
+
 p {
-  color: var(--color-grey-700);
+  color: var(--color-grey-300);
 }
 
 img {

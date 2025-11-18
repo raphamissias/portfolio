@@ -20,8 +20,8 @@ html {
   --color-brand-3: #080808;
   --color-grey-100: #1B1B1B;
   --color-grey-200: #495057;
-  --color-grey-300: #adb5bd;
-  --color-grey-400: #e1e7ea;
+  --color-grey-300: #9C9C9C;
+  --color-grey-400: #adb5bd;
   --color-grey-500: #f4f6f7;
   --color-grey-600: #f1f3f5;
   --color-grey-700: #ffffff;
@@ -36,9 +36,4 @@ html {
 
 fieldset {
   border: none;
-}
-
-a {
-  color: var(--color-grey-300);
-  text-decoration: none;
 }
