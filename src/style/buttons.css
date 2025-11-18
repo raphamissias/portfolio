@@ -1,0 +1,18 @@
+.bt-primary {
+    font-family: 'Inter', sans-serif;
+    border: 1px solid var(--color-brand-2);
+    padding: 14px 62px;
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 0 20px rgba(98, 186, 27, 0.5);
+    color: var(--color-grey-700);
+    background-color: var(--color-brand-1);
+}
+
+.bt-primary:hover {
+    background-color: var(--color-brand-2);
+    box-shadow: 0 0 20px rgba(98, 210, 27, 0.5);
+    transform: translateY(-2px);
+}

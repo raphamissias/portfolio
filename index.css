@@ -1,0 +1,104 @@
+.navbar {
+  width: calc(100% - 32px);
+  background-color: none;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+.navbar.scrolled {
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(27, 27, 27, 0.6);
+  transition: all 0.4s ease;
+}
+
+.nav-content {
+  transition: padding 0.3s ease;
+  width: 100%;
+  max-width: 1610px;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in 0.8s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+dialog {
+  background-color: var(--color-grey-100);
+}
+
+/* Disable main scroll while modal is open */
+body:has(dialog[open]) {
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+dialog[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+html.modal-open, body.modal-open {
+  overflow-x: hidden;
+}
+
+.modal_list::-webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  scrollbar-color: var(--color-grey-100) var(--color-brand-3);
+}
+
+.modal_item {
+  position: relative;
+}
+
+.modal_img {
+  display: block;
+  margin: auto;
+}
+
+.modal_info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 2rem;
+  opacity: 1;
+  transition: 0.6s;
+
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal_info:hover {
+  opacity: 0;
+}
+
+/* .navbar.scrolled .nav-content {
+  padding: 1rem 0;
+} */
