@@ -1,7 +1,7 @@
 const raruEarnings = () => {
     return `
         <h2 id="modalTitle">RaruEarnings</h2>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-8 max-sm:py-8 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/menu.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Menu</h3>
@@ -9,7 +9,7 @@ const raruEarnings = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-10 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/clients.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Clientes</h3>
@@ -17,7 +17,7 @@ const raruEarnings = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item max-sm:p-12 w-full justify-center items-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center items-center flex gap-4 max-sm:py-20 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/transactions.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Valores</h3>
@@ -25,7 +25,7 @@ const raruEarnings = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-4 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/orders.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Ordens</h3>
@@ -33,7 +33,7 @@ const raruEarnings = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/order.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Ordem</h3>
@@ -41,7 +41,7 @@ const raruEarnings = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-6 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/history.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Histórico</h3>
@@ -55,7 +55,7 @@ const raruEarnings = () => {
 const tlsvProject = () => {
     return `
         <h2 id="modalTitle">TLSV_Project</h2>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/pychse_square.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Uso</h3>
@@ -63,7 +63,7 @@ const tlsvProject = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-8 rounded-md mb-4">
             <img class="modal_img modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/oracle.png" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Funcionamento</h3>
@@ -79,7 +79,7 @@ const tlsvProject = () => {
 const raruPharmacies = () => {
     return `
         <h2 id="modalTitle">RaruPharmacies</h2>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruPharmacies/login.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Login</h3>
@@ -87,7 +87,7 @@ const raruPharmacies = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-8 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruPharmacies/main.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Tela principal</h3>
@@ -95,7 +95,7 @@ const raruPharmacies = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-8 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruPharmacies/products.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Produtos e estoque</h3>
@@ -103,7 +103,7 @@ const raruPharmacies = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruPharmacies/users.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Usuários</h3>
@@ -111,7 +111,7 @@ const raruPharmacies = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruPharmacies/sales.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Vendas</h3>
@@ -119,7 +119,7 @@ const raruPharmacies = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruPharmacies/finishing_sale.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Finalizando a venda</h3>
@@ -133,7 +133,7 @@ const raruPharmacies = () => {
 const raruBooks = () => {
     return `
         <h2 id="modalTitle">RaruBooks</h2>
-        <div class="modal_item w-full justify-center flex gap-4 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruBooks.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>API</h3>

@@ -73,11 +73,11 @@ html.modal-open, body.modal-open {
 
 .modal_item {
   position: relative;
+  overflow: hidden;
 }
 
 .modal_img {
   display: block;
-  margin: auto;
 }
 
 .modal_info {
