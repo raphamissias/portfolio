@@ -3,13 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./src/scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "J0pqsEQcUbvAsC4Tw",
+        });
+      })();
+    </script>
     <link rel="stylesheet" href="./src/style/globalStyles.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="./src/style/buttons.css" />
     <link rel="stylesheet" href="./src/style/texts.css" />
-    <link rel="stylesheet" href="./src/style/inputs.css" />
     <link rel="stylesheet" href="./src/style/animations.css" />
+    <link rel="stylesheet" href="./src/style/input.css" />
     <title>Portfolio</title>
   </head>
   <body
@@ -506,12 +519,16 @@
           <h2>Contato</h2>
           <div class="flex gap-5 items-center">
             <img
+              class="flex self-end"
               src="./src/assets/icons/article_24dp_999999_FILL0_wght400_GRAD0_opsz24.png"
               alt=""
             />
-            <div class="project_info flex gap-5 items-center">
+            <div
+              class="flex gap-5 items-center max-sm:flex-col max-sm:items-start max-sm:w-full"
+            >
               <h3>Currículo:</h3>
               <a
+                class="project_info"
                 href="https://docs.google.com/document/d/1OgMPM1jK3OzknlaDGzMknKFx9xCk2MTfzOXU6q8avM8/edit?usp=sharing"
                 target="_blank"
                 >Raphael Henrique dos Santos Missias</a
@@ -519,22 +536,58 @@
             </div>
           </div>
           <div class="flex gap-5 items-center">
-            <img src="./src/assets/icons/whatsapp_24px_999999.png" alt="" />
-            <div class="project_info flex gap-5 items-center">
+            <img
+              class="flex self-end"
+              src="./src/assets/icons/whatsapp_24px_999999.png"
+              alt=""
+            />
+            <div
+              class="flex gap-5 items-center max-sm:flex-col max-sm:items-start max-sm:w-full"
+            >
               <h3>Whatsapp:</h3>
-              <a href="https://wa.me/5541992292315" target="_blank"
+              <a
+                class="project_info"
+                href="https://wa.me/5541992292315"
+                target="_blank"
                 >(41) 99229-2315</a
               >
             </div>
           </div>
           <div class="flex gap-5 items-center">
             <img
+              class="flex self-end"
               src="./src/assets/icons/mail_24dp_999999_FILL0_wght400_GRAD0_opsz24.png"
               alt=""
             />
-            <div class="project_info flex gap-5 items-center">
-              <h3>E-mail:</h3>
-              <p>raphaelhsmissias@gmail.com</p>
+            <div
+              class="flex gap-5 items-center max-sm:flex-col max-sm:items-start max-sm:w-full"
+            >
+              <h3>Email:</h3>
+              <p class="project_info">raphaelhsmissias@gmail.com</p>
+            </div>
+          </div>
+          <div class="project_info flex mt-10">
+            <div class="flex flex-col gap-5">
+              <h3>Envie um Email:</h3>
+              <form id="email-form" action="" class="flex flex-col gap-5">
+                <label for="from_name">Nome:</label>
+                <input type="text" name="" id="from_name" />
+                <label for="from_email">E-mail:</label>
+                <input type="text" name="" id="from_email" />
+                <label for="from_phone">Telefone:</label>
+                <input type="text" name="" id="from_phone" />
+                <label for="from_message">Mensagem:</label>
+                <textarea
+                  cols="25"
+                  rows="5"
+                  type="text"
+                  name=""
+                  id="from_message"
+                ></textarea>
+              </form>
+              <button id="send-btn" onclick="sendMail()" class="bt-primary">
+                Enviar
+              </button>
             </div>
           </div>
         </section>
@@ -581,6 +634,7 @@
   <script src="./src/scripts/navMenu.js"></script>
   <script>
     tailwind.config = {
+      content: ["./index.html", "./src/**/*.{css,js,ts,jsx,tsx,html}"],
       theme: {
         extend: {
           colors: {

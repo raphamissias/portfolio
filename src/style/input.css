@@ -1,0 +1,11 @@
+#email-form input {
+  border-radius: 6px;
+  padding: 0.5rem;
+  color: var(--color-grey-100);
+}
+
+#email-form textarea {
+  border-radius: 6px;
+  padding: 0.5rem;
+  color: var(--color-grey-100);
+}
