@@ -1,7 +1,7 @@
 const raruEarnings = () => {
-    return `
+  return `
         <h2 id="modalTitle">RaruEarnings</h2>
-        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-8 max-sm:py-8 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-8 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/menu.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Menu</h3>
@@ -17,7 +17,7 @@ const raruEarnings = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-        <div class="modal_item w-full justify-center items-center items-center flex gap-4 max-sm:py-20 rounded-md mb-4">
+        <div class="modal_item w-full justify-center items-center flex gap-4 max-sm:py-20 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruEarnings/transactions.jpg" alt="project_photo">
             <div class="modal_info h-full w-full gap-2 rounded-md">
                 <h3>Valores</h3>
@@ -49,11 +49,11 @@ const raruEarnings = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-    `
-}
+    `;
+};
 
 const tlsvProject = () => {
-    return `
+  return `
         <h2 id="modalTitle">TLSV_Project</h2>
         <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/pychse_square.jpg" alt="project_photo">
@@ -73,11 +73,11 @@ const tlsvProject = () => {
             </div>
         </div>
 
-    `
-}
+    `;
+};
 
 const raruPharmacies = () => {
-    return `
+  return `
         <h2 id="modalTitle">RaruPharmacies</h2>
         <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruPharmacies/login.jpg" alt="project_photo">
@@ -127,11 +127,11 @@ const raruPharmacies = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-    `
-}
+    `;
+};
 
 const raruBooks = () => {
-    return `
+  return `
         <h2 id="modalTitle">RaruBooks</h2>
         <div class="modal_item w-full justify-center items-center flex gap-4 rounded-md mb-4">
             <img class="modal_img modal_img max-h-[350px] max-w-[400px] max-sm:h-full max-sm:w-full rounded-md" src="./src/assets/img/raruBooks.jpg" alt="project_photo">
@@ -141,14 +141,14 @@ const raruBooks = () => {
                 <img class="h-7" src="./src/assets/icons/hover.png" alt="hover_icon">
             </div>
         </div>
-    `
-}
+    `;
+};
 
 const modalProjects = {
-    raruEarnings: raruEarnings(),
-    tlsvProject: tlsvProject(),
-    raruPharmacies: raruPharmacies(),
-    raruBooks: raruBooks()
+  raruEarnings: raruEarnings(),
+  tlsvProject: tlsvProject(),
+  raruPharmacies: raruPharmacies(),
+  raruBooks: raruBooks(),
 };
 
 export default modalProjects;
