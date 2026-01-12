@@ -30,7 +30,9 @@ section {
   from {
     opacity: 0;
     transform: translateY(20px);
-  } to {
+  }
+
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -59,7 +61,8 @@ dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-html.modal-open, body.modal-open {
+html.modal-open,
+body.modal-open {
   overflow-x: hidden;
 }
 
@@ -97,6 +100,10 @@ html.modal-open, body.modal-open {
 
 .modal_info:hover {
   opacity: 0;
+}
+
+#contact a {
+  text-decoration: underline;
 }
 
 /* .navbar.scrolled .nav-content {

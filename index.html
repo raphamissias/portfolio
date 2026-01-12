@@ -1,295 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./src/style/globalStyles.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="./src/style/buttons.css">
-    <link rel="stylesheet" href="./src/style/texts.css">
-    <link rel="stylesheet" href="./src/style/inputs.css">
-    <link rel="stylesheet" href="./src/style/animations.css">
+    <link rel="stylesheet" href="./src/style/globalStyles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./src/style/buttons.css" />
+    <link rel="stylesheet" href="./src/style/texts.css" />
+    <link rel="stylesheet" href="./src/style/inputs.css" />
+    <link rel="stylesheet" href="./src/style/animations.css" />
     <title>Portfolio</title>
-</head>
-<body class="flex flex-col items-center justify-center gap-5 bg-secondary overflow-x-hidden">
+  </head>
+  <body
+    class="flex flex-col items-center justify-center gap-5 bg-secondary overflow-x-hidden"
+  >
     <div id="home"></div>
-    <header id="navbar" class="navbar mt-4 fixed top-0 z-50 p-3 flex justify-end sm:w-[90vw]">
-        <nav class="nav-content w-full px-4 flex items-center justify-between max-sm:hidden max-sm:flex-col max-sm:gap-6">
-            <div class="flex gap-10 max-sm:flex-col max-sm:items-center">
-                <a href="#home">Início</a>
-                <a href="#projects">Projetos</a>
-                <a href="#about">Sobre mim</a>
-                <a href="#next_projects">Futuros projetos</a>
-                </div>
-            <div class="flex gap-8 max-sm:flex-col max-sm:items-center">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/raphamissias">
-                    <img title="/raphamissias" class="h-10" src="./src/assets/icons/github.png" alt="GithubLogo">
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href="http://linkedin.com/in/raphamissias">
-                    <img title="/raphamissias" class="h-10" src="./src/assets/icons/linkedIn.png" alt="">
-                </a>
-            </div>
-        </nav>
-        <button id="nav-button" class="sm:hidden self-start p-2">
-            <img class="flex h-4" src="./src/assets/icons/menu.png" alt="">
-            <img class="hidden" src="./src/assets/icons/close.png" alt="">
-        </button>
+    <header
+      id="navbar"
+      class="navbar mt-4 fixed top-0 z-50 p-3 flex justify-end sm:w-[90vw]"
+    >
+      <nav
+        class="nav-content w-full px-4 flex items-center justify-between max-sm:hidden max-sm:flex-col max-sm:gap-6"
+      >
+        <div class="flex gap-10 max-sm:flex-col max-sm:items-center">
+          <a href="#home">Início</a>
+          <a href="#projects">Projetos</a>
+          <a href="#about">Sobre mim</a>
+          <a href="#next_projects">Futuros projetos</a>
+        </div>
+        <div class="flex gap-8 max-sm:flex-col max-sm:items-center">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/raphamissias"
+          >
+            <img
+              title="/raphamissias"
+              class="h-10"
+              src="./src/assets/icons/github.png"
+              alt="GithubLogo"
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://linkedin.com/in/raphamissias"
+          >
+            <img
+              title="/raphamissias"
+              class="h-10"
+              src="./src/assets/icons/linkedIn.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </nav>
+      <button id="nav-button" class="sm:hidden self-start p-2">
+        <img class="flex h-4" src="./src/assets/icons/menu.png" alt="" />
+        <img class="hidden" src="./src/assets/icons/close.png" alt="" />
+      </button>
     </header>
 
     <main class="mt-20 w-2/3 lg:w-2/4 md:w-2/3 sm:w-[90vw]">
-        <article class="flex flex-col gap-32">
-            <!-- Home -->
-            <section class="home fade mt-[10%] flex flex-col gap-24">
-                <div class="home-intro grid grid-cols-[1fr_120px] grid-rows-[auto_auto] md:grid-cols-[1fr_280px] md:grid-rows-[auto_auto] gap-4 max-lg:place-items-center">
-                    <div class="title col-start-1 row-start-1">
-                        <h2 class="text-2xl md:text-3xl font-bold">
-                            Raphael Henrique dos Santos Missias
-                        </h2>
-                    </div>
-                    <div class="intro-picture w-full col-start-2 row-start-1 md:row-span-2 md:col-start-2 md:row-start-1 flex justify-center items-start">
-                        <img class="rounded-full object-cover"
-                             src="./src/assets/img/IMG_20250608_013727.jpg" alt="pfp">
-                    </div>
-                    <div class="brief col-span-2 row-start-2 md:col-span-1 md:col-start-1 md:row-start-2 flex flex-col gap-4">
-                        <p>
-                            Olá, sou um desenvolvedor Full-Stack com foco em Backending. <br>
-                            Já desenvolvi programas para automatização e aumento de produtividade da equipe, e também para controle de dados. <br>
-                            Atualmente com foco em novos projetos que impactem pessoas enquanto desenvolvo novas habilidades.
-                        </p>
-                    
-                        <a href="#projects">
-                            <button class="bt-primary w-fit">Continuar</button>
-                        </a>
-                    </div>
-                </div>                
-                <div class="h-10 flex overflow-hidden relative gap-5">
-                    <div class="marquee-content flex justify-around gap-5 min-w-full">
-                        <img src="./src/assets/icons/c.png" alt="C#-logo">
-                        <img src="./src/assets/icons/python.png" alt="python-logo">
-                        <img src="./src/assets/icons/ts.png" alt="ts-logo">
-                        <img src="./src/assets/icons/node.png" alt="node-logo">
-                        <img src="./src/assets/icons/typeorm.png" alt="typeormlogo">
-                        <img src="./src/assets/icons/django.png" alt="django-logo">
-                        <img src="./src/assets/icons/sql.png" alt="sql">
-                        <img src="./src/assets/icons/pg.png" alt="pg-logo">
-                        <img src="./src/assets/icons/mongodb.png" alt="mongodb-logo">
-                        <img src="./src/assets/icons/api.png" alt="api-logo">
-                        <img src="./src/assets/icons/flask.png" alt="flask-logo">
-                        <img src="./src/assets/icons/react.png" alt="react-logo">
-                        <img src="./src/assets/icons/js.png" alt="js-logo">
-                        <img src="./src/assets/icons/html.png" alt="html-logo">
-                        <img src="./src/assets/icons/css.png" alt="css-logo">
-                        <img src="./src/assets/icons/tailwind.png" alt="tailwind-logo">
-                        <img src="./src/assets/icons/git.png" alt="git-logo">
-                        <img src="./src/assets/icons/zod.png" alt="zod-logo">
-                        <img src="./src/assets/icons/insomnia.png" alt="insomnia-logo">
-                        <img src="./src/assets/icons/apps_script.png" alt="apps-script-logo">
-                    </div>
-                    <div class="marquee-content flex justify-around gap-5 min-w-full">
-                        <img src="./src/assets/icons/c.png" alt="C#-logo">
-                        <img src="./src/assets/icons/python.png" alt="python-logo">
-                        <img src="./src/assets/icons/ts.png" alt="ts-logo">
-                        <img src="./src/assets/icons/node.png" alt="node-logo">
-                        <img src="./src/assets/icons/typeorm.png" alt="typeormlogo">
-                        <img src="./src/assets/icons/django.png" alt="django-logo">
-                        <img src="./src/assets/icons/sql.png" alt="sql">
-                        <img src="./src/assets/icons/pg.png" alt="pg-logo">
-                        <img src="./src/assets/icons/mongodb.png" alt="mongodb-logo">
-                        <img src="./src/assets/icons/api.png" alt="api-logo">
-                        <img src="./src/assets/icons/flask.png" alt="flask-logo">
-                        <img src="./src/assets/icons/react.png" alt="react-logo">
-                        <img src="./src/assets/icons/js.png" alt="js-logo">
-                        <img src="./src/assets/icons/html.png" alt="html-logo">
-                        <img src="./src/assets/icons/css.png" alt="css-logo">
-                        <img src="./src/assets/icons/tailwind.png" alt="tailwind-logo">
-                        <img src="./src/assets/icons/git.png" alt="git-logo">
-                        <img src="./src/assets/icons/zod.png" alt="zod-logo">
-                        <img src="./src/assets/icons/insomnia.png" alt="insomnia-logo">
-                        <img src="./src/assets/icons/apps_script.png" alt="apps-script-logo">
-                    </div>
-                </div>
-            </section>
+      <article class="flex flex-col gap-32">
+        <!-- Home -->
+        <section class="home fade mt-[10%] flex flex-col gap-24">
+          <div
+            class="home-intro grid grid-cols-[1fr_120px] grid-rows-[auto_auto] md:grid-cols-[1fr_280px] md:grid-rows-[auto_auto] gap-4 max-lg:place-items-center"
+          >
+            <div class="title col-start-1 row-start-1">
+              <h2 class="text-2xl md:text-3xl font-bold">
+                Raphael Henrique dos Santos Missias
+              </h2>
+            </div>
+            <div
+              class="intro-picture w-full col-start-2 row-start-1 md:row-span-2 md:col-start-2 md:row-start-1 flex justify-center items-start"
+            >
+              <img
+                class="rounded-full object-cover"
+                src="./src/assets/img/IMG_20250608_013727.jpg"
+                alt="pfp"
+              />
+            </div>
+            <div
+              class="brief col-span-2 row-start-2 md:col-span-1 md:col-start-1 md:row-start-2 flex flex-col gap-4"
+            >
+              <p>
+                Olá, sou um desenvolvedor Full-Stack com foco em Backending.
+                <br />
+                Já desenvolvi programas para automatização e aumento de
+                produtividade da equipe, e também para controle de dados. <br />
+                Atualmente com foco em novos projetos que impactem pessoas
+                enquanto desenvolvo novas habilidades.
+              </p>
 
-            <!-- Projects -->
-             <div id="projects"></div>
-            <section class="projects fade flex flex-col mt-8 gap-4">
-                <h2>Projetos</h2>
-                <div class="projects-content w-full flex items-center gap-20 max-sm:flex-col mb-20">
-                    <div class="projects-img h-fit w-fit">
-                      <img class="rounded w-auto max-w-[300px] h-auto object-cover" src="./src/assets/img/raruEarnings/full.jpg" alt="project_photo">
-                    </div>
-                    <div class="project_info max-w-72 flex-[1] flex flex-col gap-5">
-                        <h3>RaruEarnings</h3>
-                        <p>Site feito para controle pessoal de trabalhos concluídos na área de prótese dentária, bem como valores lançados, adiantamentos e descontos.</p>
-                        <span class="flex gap-4 flex-wrap">
-                            <img title="React" class="h-8" src="./src/assets/icons/react_color.png" alt="react-logo">
-                            <img title="Node.js" class="h-8" src="./src/assets/icons/node_color.png" alt="node-logo">
-                            <img title="TypeORM" class="h-8" src="./src/assets/icons/typeorm_color.png" alt="typeorm-logo">
-                            <img title="Apps Scripts" class="h-8" src="./src/assets/icons/apps_script_color.png" alt="apps-script-logo">
-                        </span>
-                        <button id="raruEarnings" class="btnShowModal bt-primary w-fit">Ver mais</button>
-                    </div>
-                </div>
-                <div class="projects-content w-full flex items-center gap-10 max-sm:flex-col mb-20">
-                    <div class="projects-img h-fit w-fit">
-                      <img class="rounded w-auto max-w-[350px] h-auto object-cover max-h-[350px]" src="./src/assets/img/pychse_square.jpg" alt="project_photo">
-                    </div>
-                    <div class="project_info flex-[1] flex flex-col gap-5">
-                        <h3>TLSV_Project</h3>
-                        <p>Feito para automação de relatórios a partir dos atendimentos de técnicos em telecomunicações. Com objetivo de aliviar a equipe de trabalho repetitivo, o programa faz consultas de contratos no site empresarial e retorna as informações relevantes em arquivo CSV.</p>
-                        <span class="flex gap-4 flex-wrap">
-                            <img title="Python" class="h-8" src="./src/assets/icons/python_color.png" alt="python-logo">
-                            <img title="Selenium" class="h-8" src="./src/assets/icons/selenium_color.png" alt="selenium-logo">
-                        </span>
-                        <button id="tlsvProject" class="btnShowModal bt-primary w-fit">Ver mais</button>
-                    </div>
-                </div>
-                <div class="projects-content w-full flex items-center gap-10 max-sm:flex-col mb-20">
-                    <div class="projects-img h-fit w-fit">
-                      <img class="rounded w-auto max-w-[350px] h-auto object-cover max-h-[350px]" src="./src/assets/img/pharmacies.jpg" alt="project_photo">
-                    </div>
-                    <div class="project_info flex-[1] flex flex-col gap-5">
-                        <h3>RaruPharmacies</h3>
-                        <p>Sistema de administração de farmácia, contendo área para controle de produtos, usuários, clientes, vendas e caixa. Desenvolvido usando arquitetura N-tier.</p>
-                        <span class="flex gap-4 flex-wrap">
-                            <img title="C#" class="h-8" src="./src/assets/icons/c_color.png" alt="C#-logo">
-                            <img title="SQL" class="h-8" src="./src/assets/icons/sql_color.png" alt="sql-logo">
-                        </span>
-                        <button id="raruPharmacies" class="btnShowModal bt-primary w-fit">Ver mais</button>
-                    </div>
-                </div>
-                <div class="projects-content w-full flex items-center gap-10 max-sm:flex-col mb-4">
-                    <div class="projects-img h-fit w-fit">
-                      <img class="rounded w-auto h-auto object-cover max-h-[350px]" src="./src/assets/img/api.jpg" alt="project_photo">
-                    </div>
-                    <div class="project_info flex-[1] flex flex-col gap-5">
-                        <h3>RaruBooks</h3>
-                        <p>API feita para bibliotecas, contendo cadastro de livros e leitores, e sistema de empréstimos.</p>
-                        <span class="flex gap-4 flex-wrap">
-                            <img title="Python" class="h-8" src="./src/assets/icons/python_color.png" alt="python-logo">
-                            <img title="Django" class="h-8" src="./src/assets/icons/django_color.png" alt="django-logo">
-                        </span>
-                        <button id="raruBooks" class="btnShowModal bt-primary w-fit">Ver mais</button>
-                    </div>
-                </div>
-                <dialog id="modalContainer">
-                    <div class="modal flex flex-col w-full max-sm:w-[90vw] overflow-hidden">
-                        <button id="closeModal" class="self-end py-3 px-6">X</button>
-                        <div id="modalList" class="modal_list overflow-y-auto w-full flex flex-col gap-8 p-4">
-                        </div>
-                    </div>
-                </dialog>
-            </section>
+              <a href="#projects">
+                <button class="bt-primary w-fit">Continuar</button>
+              </a>
+            </div>
+          </div>
+          <div class="h-10 flex overflow-hidden relative gap-5">
+            <div class="marquee-content flex justify-around gap-5 min-w-full">
+              <img src="./src/assets/icons/c.png" alt="C#-logo" />
+              <img src="./src/assets/icons/python.png" alt="python-logo" />
+              <img src="./src/assets/icons/ts.png" alt="ts-logo" />
+              <img src="./src/assets/icons/node.png" alt="node-logo" />
+              <img src="./src/assets/icons/typeorm.png" alt="typeormlogo" />
+              <img src="./src/assets/icons/django.png" alt="django-logo" />
+              <img src="./src/assets/icons/sql.png" alt="sql" />
+              <img src="./src/assets/icons/pg.png" alt="pg-logo" />
+              <img src="./src/assets/icons/mongodb.png" alt="mongodb-logo" />
+              <img src="./src/assets/icons/api.png" alt="api-logo" />
+              <img src="./src/assets/icons/flask.png" alt="flask-logo" />
+              <img src="./src/assets/icons/react.png" alt="react-logo" />
+              <img src="./src/assets/icons/js.png" alt="js-logo" />
+              <img src="./src/assets/icons/html.png" alt="html-logo" />
+              <img src="./src/assets/icons/css.png" alt="css-logo" />
+              <img src="./src/assets/icons/tailwind.png" alt="tailwind-logo" />
+              <img src="./src/assets/icons/git.png" alt="git-logo" />
+              <img src="./src/assets/icons/zod.png" alt="zod-logo" />
+              <img src="./src/assets/icons/insomnia.png" alt="insomnia-logo" />
+              <img
+                src="./src/assets/icons/apps_script.png"
+                alt="apps-script-logo"
+              />
+            </div>
+            <div class="marquee-content flex justify-around gap-5 min-w-full">
+              <img src="./src/assets/icons/c.png" alt="C#-logo" />
+              <img src="./src/assets/icons/python.png" alt="python-logo" />
+              <img src="./src/assets/icons/ts.png" alt="ts-logo" />
+              <img src="./src/assets/icons/node.png" alt="node-logo" />
+              <img src="./src/assets/icons/typeorm.png" alt="typeormlogo" />
+              <img src="./src/assets/icons/django.png" alt="django-logo" />
+              <img src="./src/assets/icons/sql.png" alt="sql" />
+              <img src="./src/assets/icons/pg.png" alt="pg-logo" />
+              <img src="./src/assets/icons/mongodb.png" alt="mongodb-logo" />
+              <img src="./src/assets/icons/api.png" alt="api-logo" />
+              <img src="./src/assets/icons/flask.png" alt="flask-logo" />
+              <img src="./src/assets/icons/react.png" alt="react-logo" />
+              <img src="./src/assets/icons/js.png" alt="js-logo" />
+              <img src="./src/assets/icons/html.png" alt="html-logo" />
+              <img src="./src/assets/icons/css.png" alt="css-logo" />
+              <img src="./src/assets/icons/tailwind.png" alt="tailwind-logo" />
+              <img src="./src/assets/icons/git.png" alt="git-logo" />
+              <img src="./src/assets/icons/zod.png" alt="zod-logo" />
+              <img src="./src/assets/icons/insomnia.png" alt="insomnia-logo" />
+              <img
+                src="./src/assets/icons/apps_script.png"
+                alt="apps-script-logo"
+              />
+            </div>
+          </div>
+        </section>
 
-            <!-- About -->
-            <section id="about" class="fade flex flex-col gap-5">
-                <h2>Sobre mim</h2>
-                <div class="flex flex-col gap-5">
-                    <p>
-                        Já com amplo conhecimento em computação, veio até mim a oportunidade de cursar programação, onde me identifiquei profissionalmente e desde então, apliquei-me a estudar com zelo para me tornar um profissional competente e resoluto.
-                    </p>
-                </div>
-                <!-- Carousel of cards -->
-                <div class="carousel w-full max-w-4xl mx-auto overflow-hidden relative">
-                    <div class="inner flex">
-                        <div class="card flex-shrink-0 w-full flex flex-col items-center justify-center">
-                          <img class="w-40 h-40 object-contain mb-4" src="./src/assets/icons/vault_emotional.png" alt="">
-                          <h3 class=" font-bold">Equilíbrio emocional</h3>
-                          <p class="max-w-md text-center"></p>
-                        </div>
-                    
-                        <div class="card flex-shrink-0 w-full flex flex-col items-center justify-center">
-                          <img class="w-40 h-40 object-contain mb-4" src="./src/assets/icons/vault_skill.png" alt="">
-                          <h3 class=" font-bold">Raciocínio lógico e crítico</h3>
-                          <p class="max-w-md text-center"></p>
-                        </div>
+        <!-- Projects -->
+        <div id="projects"></div>
+        <section class="projects fade flex flex-col mt-8 gap-4">
+          <h2>Projetos</h2>
+          <div
+            class="projects-content w-full flex items-center gap-20 max-sm:flex-col mb-20"
+          >
+            <div class="projects-img h-fit w-fit">
+              <img
+                class="rounded w-auto max-w-[300px] h-auto object-cover"
+                src="./src/assets/img/raruEarnings/full.jpg"
+                alt="project_photo"
+              />
+            </div>
+            <div class="project_info max-w-72 flex-[1] flex flex-col gap-5">
+              <h3>RaruEarnings</h3>
+              <p>
+                Site feito para controle pessoal de trabalhos concluídos na área
+                de prótese dentária, bem como valores lançados, adiantamentos e
+                descontos.
+              </p>
+              <span class="flex gap-4 flex-wrap">
+                <img
+                  title="React"
+                  class="h-8"
+                  src="./src/assets/icons/react_color.png"
+                  alt="react-logo"
+                />
+                <img
+                  title="Node.js"
+                  class="h-8"
+                  src="./src/assets/icons/node_color.png"
+                  alt="node-logo"
+                />
+                <img
+                  title="TypeORM"
+                  class="h-8"
+                  src="./src/assets/icons/typeorm_color.png"
+                  alt="typeorm-logo"
+                />
+                <img
+                  title="Apps Scripts"
+                  class="h-8"
+                  src="./src/assets/icons/apps_script_color.png"
+                  alt="apps-script-logo"
+                />
+              </span>
+              <button id="raruEarnings" class="btnShowModal bt-primary w-fit">
+                Ver mais
+              </button>
+            </div>
+          </div>
+          <div
+            class="projects-content w-full flex items-center gap-10 max-sm:flex-col mb-20"
+          >
+            <div class="projects-img h-fit w-fit">
+              <img
+                class="rounded w-auto max-w-[350px] h-auto object-cover max-h-[350px]"
+                src="./src/assets/img/pychse_square.jpg"
+                alt="project_photo"
+              />
+            </div>
+            <div class="project_info flex-[1] flex flex-col gap-5">
+              <h3>TLSV_Project</h3>
+              <p>
+                Feito para automação de relatórios a partir dos atendimentos de
+                técnicos em telecomunicações. Com objetivo de aliviar a equipe
+                de trabalho repetitivo, o programa faz consultas de contratos no
+                site empresarial e retorna as informações relevantes em arquivo
+                CSV.
+              </p>
+              <span class="flex gap-4 flex-wrap">
+                <img
+                  title="Python"
+                  class="h-8"
+                  src="./src/assets/icons/python_color.png"
+                  alt="python-logo"
+                />
+                <img
+                  title="Selenium"
+                  class="h-8"
+                  src="./src/assets/icons/selenium_color.png"
+                  alt="selenium-logo"
+                />
+              </span>
+              <button id="tlsvProject" class="btnShowModal bt-primary w-fit">
+                Ver mais
+              </button>
+            </div>
+          </div>
+          <div
+            class="projects-content w-full flex items-center gap-10 max-sm:flex-col mb-20"
+          >
+            <div class="projects-img h-fit w-fit">
+              <img
+                class="rounded w-auto max-w-[350px] h-auto object-cover max-h-[350px]"
+                src="./src/assets/img/pharmacies.jpg"
+                alt="project_photo"
+              />
+            </div>
+            <div class="project_info flex-[1] flex flex-col gap-5">
+              <h3>RaruPharmacies</h3>
+              <p>
+                Sistema de administração de farmácia, contendo área para
+                controle de produtos, usuários, clientes, vendas e caixa.
+                Desenvolvido usando arquitetura N-tier.
+              </p>
+              <span class="flex gap-4 flex-wrap">
+                <img
+                  title="C#"
+                  class="h-8"
+                  src="./src/assets/icons/c_color.png"
+                  alt="C#-logo"
+                />
+                <img
+                  title="SQL"
+                  class="h-8"
+                  src="./src/assets/icons/sql_color.png"
+                  alt="sql-logo"
+                />
+              </span>
+              <button id="raruPharmacies" class="btnShowModal bt-primary w-fit">
+                Ver mais
+              </button>
+            </div>
+          </div>
+          <div
+            class="projects-content w-full flex items-center gap-10 max-sm:flex-col mb-4"
+          >
+            <div class="projects-img h-fit w-fit">
+              <img
+                class="rounded w-auto h-auto object-cover max-h-[350px]"
+                src="./src/assets/img/api.jpg"
+                alt="project_photo"
+              />
+            </div>
+            <div class="project_info flex-[1] flex flex-col gap-5">
+              <h3>RaruBooks</h3>
+              <p>
+                API feita para bibliotecas, contendo cadastro de livros e
+                leitores, e sistema de empréstimos.
+              </p>
+              <span class="flex gap-4 flex-wrap">
+                <img
+                  title="Python"
+                  class="h-8"
+                  src="./src/assets/icons/python_color.png"
+                  alt="python-logo"
+                />
+                <img
+                  title="Django"
+                  class="h-8"
+                  src="./src/assets/icons/django_color.png"
+                  alt="django-logo"
+                />
+              </span>
+              <button id="raruBooks" class="btnShowModal bt-primary w-fit">
+                Ver mais
+              </button>
+            </div>
+          </div>
+          <dialog id="modalContainer">
+            <div
+              class="modal flex flex-col w-full max-sm:w-[90vw] overflow-hidden"
+            >
+              <button id="closeModal" class="self-end py-3 px-6">X</button>
+              <div
+                id="modalList"
+                class="modal_list overflow-y-auto w-full flex flex-col gap-8 p-4"
+              ></div>
+            </div>
+          </dialog>
+        </section>
 
-                        <div class="card flex-shrink-0 w-full flex flex-col items-center justify-center">
-                          <img class="w-40 h-40 object-contain mb-4" src="./src/assets/icons/vault_explorer.png" alt="">
-                          <h3 class=" font-bold">Aprendizado contínuo</h3>
-                          <p class="max-w-md text-center"></p>
-                        </div>
+        <!-- About -->
+        <section id="about" class="fade flex flex-col gap-5">
+          <h2>Sobre mim</h2>
+          <div class="flex flex-col gap-5">
+            <p>
+              Já com amplo conhecimento em computação, veio até mim a
+              oportunidade de cursar programação, onde me identifiquei
+              profissionalmente e desde então, apliquei-me a estudar com zelo
+              para me tornar um profissional competente e resoluto.
+            </p>
+          </div>
+          <!-- Carousel of cards -->
+          <div
+            class="carousel w-full max-w-4xl mx-auto overflow-hidden relative"
+          >
+            <div class="inner flex">
+              <div
+                class="card flex-shrink-0 w-full flex flex-col items-center justify-center"
+              >
+                <img
+                  class="w-40 h-40 object-contain mb-4"
+                  src="./src/assets/icons/vault_emotional.png"
+                  alt=""
+                />
+                <h3 class="font-bold">Equilíbrio emocional</h3>
+                <p class="max-w-md text-center"></p>
+              </div>
 
-                        <div class="card flex-shrink-0 w-full flex flex-col items-center justify-center">
-                          <img class="w-40 h-40 object-contain mb-4" src="./src/assets/icons/vault_etic.png" alt="">
-                          <h3 class=" font-bold">Ética</h3>
-                          <p class="max-w-md text-center"></p>
-                        </div>                
-                  </div>
-                </div>
-                <h2>Algumas das tecnologias que já trabalhei:</h2>
-                <div class="flex flex-wrap items-center justify-around gap-5 min-w-full">
-                    <img title="C#" src="./src/assets/icons/c_color.png" alt="C#-logo">
-                    <img title="python" src="./src/assets/icons/python_color.png" alt="python-logo">
-                    <img title="typescript" src="./src/assets/icons/ts_color.png" alt="ts-logo">
-                    <img title="node.js" src="./src/assets/icons/node_color.png" alt="node-logo">
-                    <img title="typeORM" src="./src/assets/icons/typeorm_color.png" alt="typeormlogo">
-                    <img title="django" src="./src/assets/icons/django_color.png" alt="django-logo">
-                    <img title="sql" src="./src/assets/icons/sql_color.png" alt="sql-logo">
-                    <img title="postgreSQL" src="./src/assets/icons/pg_color.png" alt="pg-logo">
-                    <img title="mongoDB" src="./src/assets/icons/mongodb_color.png" alt="mongodb-logo">
-                    <img title="api" src="./src/assets/icons/api_color.png" alt="api-logo">
-                    <img title="flask" src="./src/assets/icons/flask_color.png" alt="flask-logo">
-                    <img title="react" src="./src/assets/icons/react_color.png" alt="react-logo"> 
-                    <img title="js" src="./src/assets/icons/js_color.png" alt="js-logo">
-                    <img title="html" src="./src/assets/icons/html_color.png" alt="html-logo">
-                    <img title="css" src="./src/assets/icons/css_color.png" alt="css-logo">
-                    <img title="tailwind" src="./src/assets/icons/tailwind_color.png" alt="tailwind-logo">
-                    <img title="git" src="./src/assets/icons/git_color.png" alt="git-logo">
-                    <img title="zod" src="./src/assets/icons/zod_color.png" alt="zod-logo">
-                    <img title="insomnia" src="./src/assets/icons/insomnia_color.png" alt="insomnia-logo">
-                    <img title="apps script" src="./src/assets/icons/apps_script_color.png" alt="apps-script-logo">
-                </div>
-            </section>
+              <div
+                class="card flex-shrink-0 w-full flex flex-col items-center justify-center"
+              >
+                <img
+                  class="w-40 h-40 object-contain mb-4"
+                  src="./src/assets/icons/vault_skill.png"
+                  alt=""
+                />
+                <h3 class="font-bold">Raciocínio lógico e crítico</h3>
+                <p class="max-w-md text-center"></p>
+              </div>
 
-            <!-- Next projects -->
-            <section id="next_projects" class="fade flex flex-col gap-10">
-                <h2>Futuros projetos</h2>
-                <div class="flex gap-10 max-sm:flex-col items-center">
-                    <img class="max-h-[250px] w-fit rounded h-full" src="./src/assets/img/raruearnings.jpg" alt="project_photo">
-                    <div class="project_info flex flex-col gap-10">
-                        <h3>RaruEarnings</h3>
-                        <p>Manter o programa com novas atualizações e correções afim de aumentar ainda mais o escopo do projeto.</p>
-                    </div>
-                </div>
-                <div class="flex gap-10 max-sm:flex-col items-center">
-                    <img class="max-h-[250px] w-fit rounded h-full" src="./src/assets/img/milhas.jpg" alt="project_photo">
-                    <div class="project_info flex flex-col gap-10">
-                        <h3>Milhas: Confidencial</h3>
-                        <p>Criação de um site para administração de milhas aéreas, com intuito de aumentar clientes bem como a satisfação dos que já são contratantes do serviço.</p>
-                    </div>
-                </div>
-            </section>
-        </article>
-        <footer>
-            <div class="h-64"></div>
-        </footer>
+              <div
+                class="card flex-shrink-0 w-full flex flex-col items-center justify-center"
+              >
+                <img
+                  class="w-40 h-40 object-contain mb-4"
+                  src="./src/assets/icons/vault_explorer.png"
+                  alt=""
+                />
+                <h3 class="font-bold">Aprendizado contínuo</h3>
+                <p class="max-w-md text-center"></p>
+              </div>
+
+              <div
+                class="card flex-shrink-0 w-full flex flex-col items-center justify-center"
+              >
+                <img
+                  class="w-40 h-40 object-contain mb-4"
+                  src="./src/assets/icons/vault_etic.png"
+                  alt=""
+                />
+                <h3 class="font-bold">Ética</h3>
+                <p class="max-w-md text-center"></p>
+              </div>
+            </div>
+          </div>
+          <h2>Algumas das tecnologias que já trabalhei:</h2>
+          <div
+            class="flex flex-wrap items-center justify-around gap-5 min-w-full"
+          >
+            <img
+              title="C#"
+              src="./src/assets/icons/c_color.png"
+              alt="C#-logo"
+            />
+            <img
+              title="python"
+              src="./src/assets/icons/python_color.png"
+              alt="python-logo"
+            />
+            <img
+              title="typescript"
+              src="./src/assets/icons/ts_color.png"
+              alt="ts-logo"
+            />
+            <img
+              title="node.js"
+              src="./src/assets/icons/node_color.png"
+              alt="node-logo"
+            />
+            <img
+              title="typeORM"
+              src="./src/assets/icons/typeorm_color.png"
+              alt="typeormlogo"
+            />
+            <img
+              title="django"
+              src="./src/assets/icons/django_color.png"
+              alt="django-logo"
+            />
+            <img
+              title="sql"
+              src="./src/assets/icons/sql_color.png"
+              alt="sql-logo"
+            />
+            <img
+              title="postgreSQL"
+              src="./src/assets/icons/pg_color.png"
+              alt="pg-logo"
+            />
+            <img
+              title="mongoDB"
+              src="./src/assets/icons/mongodb_color.png"
+              alt="mongodb-logo"
+            />
+            <img
+              title="api"
+              src="./src/assets/icons/api_color.png"
+              alt="api-logo"
+            />
+            <img
+              title="flask"
+              src="./src/assets/icons/flask_color.png"
+              alt="flask-logo"
+            />
+            <img
+              title="react"
+              src="./src/assets/icons/react_color.png"
+              alt="react-logo"
+            />
+            <img
+              title="js"
+              src="./src/assets/icons/js_color.png"
+              alt="js-logo"
+            />
+            <img
+              title="html"
+              src="./src/assets/icons/html_color.png"
+              alt="html-logo"
+            />
+            <img
+              title="css"
+              src="./src/assets/icons/css_color.png"
+              alt="css-logo"
+            />
+            <img
+              title="tailwind"
+              src="./src/assets/icons/tailwind_color.png"
+              alt="tailwind-logo"
+            />
+            <img
+              title="git"
+              src="./src/assets/icons/git_color.png"
+              alt="git-logo"
+            />
+            <img
+              title="zod"
+              src="./src/assets/icons/zod_color.png"
+              alt="zod-logo"
+            />
+            <img
+              title="insomnia"
+              src="./src/assets/icons/insomnia_color.png"
+              alt="insomnia-logo"
+            />
+            <img
+              title="apps script"
+              src="./src/assets/icons/apps_script_color.png"
+              alt="apps-script-logo"
+            />
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="fade flex flex-col gap-5">
+          <h2>Contato</h2>
+          <div class="flex gap-5 items-center">
+            <img
+              src="./src/assets/icons/article_24dp_999999_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+            />
+            <div class="project_info flex gap-5 items-center">
+              <h3>Currículo:</h3>
+              <a
+                href="https://docs.google.com/document/d/1OgMPM1jK3OzknlaDGzMknKFx9xCk2MTfzOXU6q8avM8/edit?usp=sharing"
+                target="_blank"
+                >Raphael Henrique dos Santos Missias</a
+              >
+            </div>
+          </div>
+          <div class="flex gap-5 items-center">
+            <img src="./src/assets/icons/whatsapp_24px_999999.png" alt="" />
+            <div class="project_info flex gap-5 items-center">
+              <h3>Whatsapp:</h3>
+              <a href="https://wa.me/5541992292315" target="_blank"
+                >(41) 99229-2315</a
+              >
+            </div>
+          </div>
+          <div class="flex gap-5 items-center">
+            <img
+              src="./src/assets/icons/mail_24dp_999999_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+            />
+            <div class="project_info flex gap-5 items-center">
+              <h3>E-mail:</h3>
+              <p>raphaelhsmissias@gmail.com</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Next projects -->
+        <section id="next_projects" class="fade flex flex-col gap-10">
+          <h2>Futuros projetos</h2>
+          <div class="flex gap-10 max-sm:flex-col items-center">
+            <img
+              class="max-h-[250px] w-fit rounded h-full"
+              src="./src/assets/img/raruearnings.jpg"
+              alt="project_photo"
+            />
+            <div class="project_info flex flex-col gap-10">
+              <h3>RaruEarnings</h3>
+              <p>
+                Manter o programa com novas atualizações e correções afim de
+                aumentar ainda mais o escopo do projeto.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-10 max-sm:flex-col items-center">
+            <img
+              class="max-h-[250px] w-fit rounded h-full"
+              src="./src/assets/img/milhas.jpg"
+              alt="project_photo"
+            />
+            <div class="project_info flex flex-col gap-10">
+              <h3>Milhas: Confidencial</h3>
+              <p>
+                Criação de um site para administração de milhas aéreas, com
+                intuito de aumentar clientes bem como a satisfação dos que já
+                são contratantes do serviço.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+      <footer>
+        <div class="h-64"></div>
+      </footer>
     </main>
-</body>
-<script type="module" src="./src/scripts/modal.js"></script>
-<script src="./src/scripts/navMenu.js"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#3F8E00',
-          secondary: '#080808',
-          tertiary: '#1B1B1B',
+  </body>
+  <script type="module" src="./src/scripts/modal.js"></script>
+  <script src="./src/scripts/navMenu.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3F8E00",
+            secondary: "#080808",
+            tertiary: "#1B1B1B",
+          },
         },
+      },
+    };
+  </script>
+  <script>
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
       }
-    }
-  }
-</script>
-<script>
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
     });
-</script>
+  </script>
 </html>
